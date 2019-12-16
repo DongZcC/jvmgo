@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"jvmgo/ch04/rtdata"
+	"jvmgo/ch05/rtda"
 )
 
 func main() {
@@ -18,12 +18,12 @@ func main() {
 }
 
 func startJVM(cmd *Cmd) {
-	frame := rtdata.NewFrame(100, 100)
+	frame := rtda.NewFrame(100, 100)
 	testLocalVars(frame.LocalVars())
 	testOperandStack(frame.OperandStack())
 }
 
-func testOperandStack(ops *rtdata.OperandStack) {
+func testOperandStack(ops *rtda.OperandStack) {
 	ops.PushInt(100)
 	ops.PushInt(-100)
 	ops.PushLong(2997924580)
@@ -40,7 +40,7 @@ func testOperandStack(ops *rtdata.OperandStack) {
 	println(ops.PopInt())
 }
 
-func testLocalVars(vars rtdata.LocalVars) {
+func testLocalVars(vars rtda.LocalVars) {
 	vars.SetInt(0, 100)
 	vars.SetInt(1, -100)
 	vars.SetLong(2, 2997924580)

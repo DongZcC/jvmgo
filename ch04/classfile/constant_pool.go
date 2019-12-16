@@ -19,7 +19,7 @@ func (self ConstantPool) getConstantInfo(index uint16) ConstantInfo {
 	if cpInfo := self[index]; cpInfo != nil {
 		return cpInfo
 	}
-	panic("Invalid constant pool index")
+	panic("Invalid constants pool index")
 }
 
 func (self ConstantPool) getNameAndType(index uint16) (string, string) {
