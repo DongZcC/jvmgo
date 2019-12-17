@@ -53,7 +53,7 @@ func (self *IFGT) Execute(frame *rtda.Frame) {
 
 type IFGE struct{ base.BranchInstruction }
 
-func (self *IFGT) Execute(frame *rtda.Frame) {
+func (self *IFGE) Execute(frame *rtda.Frame) {
 	val := frame.OperandStack().PopInt()
 	if val >= 0 {
 		base.Branch(frame, self.Offset)
