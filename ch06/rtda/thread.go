@@ -12,6 +12,7 @@ JVM
 type Thread struct {
 	pc    int // the address of the instruction currently being executed
 	stack *Stack
+	// todo
 }
 
 func NewThread() *Thread {
